@@ -1,4 +1,4 @@
-package br.com.brunoti.cursos.dio.kotlinbasenativocontatos
+package br.com.brunoti.cursos.dio.kotlinpractisenativecontacts
 
 import org.junit.Test
 

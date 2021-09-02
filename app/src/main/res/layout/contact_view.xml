@@ -1,24 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/contact_name"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="20sp"
-        android:text="Nome"
-        android:paddingBottom="5dp"
-        android:paddingTop="20dp" />
-
-    <TextView
-        android:id="@+id/contact_phone"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="Telefone" />
+        android:layout_margin="8dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtCardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="@string/card_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/card_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtCardNameAlternative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="@string/card_name_alternative"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtCardName"
+                app:layout_constraintStart_toStartOf="@+id/txtCardName"
+                app:layout_constraintTop_toBottomOf="@+id/txtCardName"
+                tools:text="@string/card_name_alternative" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtCardPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_phone"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtCardNameAlternative"
+                app:layout_constraintStart_toStartOf="@+id/txtCardNameAlternative"
+                app:layout_constraintTop_toBottomOf="@+id/txtCardNameAlternative"
+                tools:text="@string/card_phone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
