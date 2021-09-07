@@ -1,4 +1,4 @@
-# Kotlin Practise Native Contacts
+# Kotlin Practice Native Contacts
 
 <img src="screenshot.png"/>
 
